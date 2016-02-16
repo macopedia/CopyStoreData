@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Macopedia_CopyStoreData>
+            <version>1.0.0</version>
+        </Macopedia_CopyStoreData>
+    </modules>
+    <global>
+        <blocks>
+            <macopedia_copystoredata>
+                <class>Macopedia_CopyStoreData_Block</class>
+            </macopedia_copystoredata>
+            <adminhtml>
+                <rewrite>
+                    <system_store_store>Macopedia_CopyStoreData_Block_Adminhtml_System_Store_Store</system_store_store>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        <helpers>
+            <macopedia_copystoredata>
+                <class>Macopedia_CopyStoreData_Helper</class>
+            </macopedia_copystoredata>
+        </helpers>
+        <models>
+            <macopedia_copystoredata>
+                <class>Macopedia_CopyStoreData_Model</class>
+            </macopedia_copystoredata>
+        </models>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Macopedia_CopyStoreData before="Mage_Adminhtml">Macopedia_CopyStoreData_Adminhtml</Macopedia_CopyStoreData>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
